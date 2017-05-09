@@ -5,7 +5,7 @@
     <title>TextminersDemoCase</title>
   </head>
   <body>
-    <form onsubmit="x.value=(wordCount(a.value) / countPeriods(a.value)) + (longWordCount(a.value) * 100 / wordCount(a.value))">
+    <form oninput="x.value=(wordCount(a.value) / countPeriods(a.value)) + (longWordCount(a.value) * 100 / wordCount(a.value))">
       <!-- <form onsubmit="x.value=countPeriods(a.value)"> -->
       <textarea id="a" rows="4" cols="50">
       </textarea>
@@ -19,14 +19,12 @@
             var capLetter = str.length - str.replace(/[A-Z]/g, '').length;
             return (dots+colons+capLetter);
         }
-
         function longWordCount(str) {
             return str.match(/[\w0-9]{8,}/gi).length;
         }
-
       </script>
-      <input type="submit" value="Submit">
-      =<output name="x" for="a"></output>
+      <!-- <input type="submit" value="Submit"> -->
+      => LIX readability measure =<output name="x" for="a"></output>
     </form>
   </body>
 </html>
