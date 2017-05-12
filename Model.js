@@ -8,9 +8,18 @@
       var capLetter = str.length - str.replace(/[A-Z]/g, '').length;
       return (dots+colons+capLetter);
   }
-  function longWordCount(str) {
-      return str.match(/[\w0-9]{8,}/gi).length;
-  }
+  try {
+      function longWordCount(str) {
+        return str.match(/[\w0-9]{8,}/gi).length;
+      }
+    } catch (error) {
+      alert("Something went wrong: ", error);
+    }
+  //   finally {
+  //     function longWordCount(str) {
+  //         return null;
+  //     }
+  // }
   function lixCalc() {
     var lix = (wordCount(userText.value) / countPeriods(userText.value)) +
     (longWordCount(userText.value) * 100 / wordCount(userText.value));
