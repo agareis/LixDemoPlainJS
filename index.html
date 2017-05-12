@@ -3,28 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>TextminersDemoCase</title>
+    <script type="text/javascript" src="model.js"></script>
   </head>
   <body>
-    <form oninput="x.value=(wordCount(a.value) / countPeriods(a.value)) + (longWordCount(a.value) * 100 / wordCount(a.value))">
-      <!-- <form onsubmit="x.value=countPeriods(a.value)"> -->
-      <textarea id="a" rows="4" cols="50">
-      </textarea>
-      <script >
-        function wordCount(str) {
-          return str.split(' ').length;
-        }
-        function countPeriods(str) {
-            var dots = str.split(".").length - 1;
-            var colons = str.split(":").length - 1;
-            var capLetter = str.length - str.replace(/[A-Z]/g, '').length;
-            return (dots+colons+capLetter);
-        }
-        function longWordCount(str) {
-            return str.match(/[\w0-9]{8,}/gi).length;
-        }
-      </script>
+    <form oninput="lixMeasure.value=lixCalc(userText.value)">
+      <!-- <form onsubmit="lixMeasure.value=countPeriods(userText.value)"> -->
+      <textarea id="userText" rows="4" cols="50"></textarea>
+
       <!-- <input type="submit" value="Submit"> -->
-      => LIX readability measure =<output name="x" for="a"></output>
+      => LIX readability measure = <output name="lixMeasure" for="userText"></output>
     </form>
   </body>
 </html>
