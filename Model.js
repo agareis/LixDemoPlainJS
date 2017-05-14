@@ -1,4 +1,3 @@
-
   function wordCount(str) {
     return str.split(' ').length;
   }
@@ -8,20 +7,24 @@
       var capLetter = str.length - str.replace(/[A-Z]/g, '').length;
       return (dots+colons+capLetter);
   }
-  try {
-      function longWordCount(str) {
-        return str.match(/[\w0-9]{8,}/gi).length;
-      }
-    } catch (error) {
-      alert("Something went wrong: ", error);
+  function longWordCount(str) {
+    try {
+      return str.match(/[\w0-9]{7,}/gi).length;
     }
-  //   finally {
-  //     function longWordCount(str) {
-  //         return null;
-  //     }
-  // }
+    catch (error){
+      console.log("Something went wrong ", error);
+    }
+    finally {
+      return null;
+    }
+  }
   function lixCalc() {
     var lix = (wordCount(userText.value) / countPeriods(userText.value)) +
     (longWordCount(userText.value) * 100 / wordCount(userText.value));
-    return lix;
+
+    if (lix==Infinity) {
+      return "Not enought characters or periods. Please add or type some more content.";
+    } else {
+      return lix;
+    }
   }
