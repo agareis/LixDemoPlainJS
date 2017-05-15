@@ -3,13 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>TextminersDemoCase</title>
-    <script type="text/javascript" src="model.js"></script>
+    <script type="text/javascript" src="model.js" async></script>
   </head>
   <body>
-    <form oninput="lixMeasure.value=lixCalc(userText.value)">
-      <!-- <form onsubmit="lixMeasure.value=countPeriods(userText.value)"> -->
+    <form oninput="lixMeasure.value=computeLix(userText.value)">
       <textarea id="userText" rows="4" cols="50"></textarea>
-
       <!-- <input type="submit" value="Submit"> -->
       => LIX readability measure = <output name="lixMeasure" for="userText"></output>
     </form>

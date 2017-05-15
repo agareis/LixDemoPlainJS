@@ -1,13 +1,13 @@
-  function wordCount(str) {
+  function getWordsCount(str) {
     return str.split(' ').length;
   }
-  function countPeriods(str) {
+  function getPeriodsCount(str) {
       var dots = str.split(".").length - 1;
       var colons = str.split(":").length - 1;
-      var capLetter = str.length - str.replace(/[A-Z]/g, '').length;
-      return (dots+colons+capLetter);
+      var capLetters = str.length - str.replace(/[A-Z]/g, '').length;
+      return (dots+colons+capLetters);
   }
-  function longWordCount(str) {
+  function getLongWordsCount(str) {
     try {
       return str.match(/[\w0-9]{7,}/gi).length;
     }
@@ -18,9 +18,9 @@
       return null;
     }
   }
-  function lixCalc() {
-    var lix = (wordCount(userText.value) / countPeriods(userText.value)) +
-    (longWordCount(userText.value) * 100 / wordCount(userText.value));
+  function computeLix() {
+    var lix = (getWordsCount(userText.value) / getPeriodsCount(userText.value)) +
+    (getLongWordsCount(userText.value) * 100 / getWordsCount(userText.value));
 
     if (lix==Infinity) {
       return "Not enought characters or periods. Please add or type some more content.";
