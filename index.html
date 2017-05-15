@@ -6,8 +6,10 @@
     <script type="text/javascript" src="model.js" async></script>
   </head>
   <body>
+    <h1>Welcome to the LIX-Readablity-Calculator<h1>
+      <h2>Find out how readable your text is!</h2>        
     <form oninput="lixMeasure.value=computeLix(userText.value)">
-      <textarea id="userText" rows="4" cols="50"></textarea>
+      <textarea id="userText" placeholder="Add sample text by typing in or pasting text and see instantly the results." rows="4" cols="50"></textarea>
       <!-- <input type="submit" value="Submit"> -->
       => LIX readability measure = <output name="lixMeasure" for="userText"></output>
     </form>
