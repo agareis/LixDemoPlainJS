@@ -13,9 +13,7 @@
     }
     catch (error){
       console.log("Something went wrong ", error);
-    }
-    finally {
-      return null;
+      return 0;
     }
   }
   function computeLix() {
