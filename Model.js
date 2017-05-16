@@ -8,14 +8,12 @@
       return (dots+colons+capLetters);
   }
   function getLongWordsCount(str) {
-    try {
-      return str.match(/[\w0-9]{7,}/gi).length;
+    var match = str.match(/[\w0-9]{7,}/gi);
+    if (match === null) {  // No long words were found
+    	return 0;
     }
-    catch (error){
       console.log("Something went wrong ", error);
-      return 0;
-    }
-  }
+    return match.length;
   function computeLix() {
     var lix = (getWordsCount(userText.value) / getPeriodsCount(userText.value)) +
     (getLongWordsCount(userText.value) * 100 / getWordsCount(userText.value));
