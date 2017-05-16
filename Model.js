@@ -22,15 +22,15 @@
 
     if (lix==Infinity) {
       return "Not enought characters or periods. Please add or type some more content.";
-    } else if (lix < 29) {
+    } else if (lix < 30) {
       return "Difficulty: Very easy";
-    } else if (lix>30 && lix<40) {
+    } else if (lix>=30 && lix<40) {
       return "Difficulty: Easy";
-    } else if (lix>40 && lix<50) {
+    } else if (lix>=40 && lix<50) {
       return "Difficulty: Medium";
-    } else if (lix>50 && lix<60) {
+    } else if (lix>=50 && lix<60) {
       return "Difficulty: Difficult";
-    } else if (lix>60) {
+    } else if (lix>=60) {
       return "Difficulty: Very Difficult";
     }
   }
