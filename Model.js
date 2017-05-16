@@ -12,7 +12,6 @@
     if (match === null) {  // No long words were found
     	return 0;
     }
-      console.log("Something went wrong ", error);
     return match.length;
   function computeLix() {
     var lix = (getWordsCount(userText.value) / getPeriodsCount(userText.value)) +
