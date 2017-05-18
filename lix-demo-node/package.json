@@ -2,9 +2,9 @@
   "name": "lix-demo-node",
   "version": "1.0.0",
   "description": "lix calculator in backend",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "npm install express --save"
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/agareis/coding-journey#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.15.3"
   }
 }
