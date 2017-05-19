@@ -13,6 +13,7 @@
     	return 0;
     }
     return match.length;
+  }  
   function computeLix() {
     var lix = (getWordsCount(userText.value) / getPeriodsCount(userText.value)) +
     (getLongWordsCount(userText.value) * 100 / getWordsCount(userText.value));
