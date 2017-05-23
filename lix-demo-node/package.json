@@ -4,7 +4,8 @@
   "description": "lix calculator in backend",
   "main": "app.js",
   "scripts": {
-    "test": ""
+    "prestart": "npm install",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/agareis/coding-journey#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect": "^3.6.2",
     "express": "^4.15.3"
   }
 }
