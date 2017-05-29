@@ -19,7 +19,6 @@
   "homepage": "https://github.com/agareis/coding-journey#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "connect": "^3.6.2",
     "express": "^4.15.3"
   }
 }
