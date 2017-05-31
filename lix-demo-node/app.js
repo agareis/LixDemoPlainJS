@@ -1,3 +1,4 @@
+var computeLix = require('./readability.js')
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser');
@@ -7,7 +8,6 @@ app.use(bodyParser.json());
 // POST: {"text":"This is a Test"}  <-- JSON encoding
 app.post('/api/v1/readability', function (req, res) {
   var userText = req.body.text;
-  var computeLix = require('./readability.js')
   res.send(computeLix(userText));
 })
 
