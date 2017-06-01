@@ -2,7 +2,6 @@ function getWordsCount(str) {
   console.log("getWordsCount:" + str.split(' ').length);
   return str.split(' ').length;
 }
-
 function getPeriodsCount(str) {
     var dots = str.split(".").length - 1;
     var colons = str.split(":").length - 1;
