@@ -1,14 +1,14 @@
-
+var myReadability = document.getElementById("readabilityOutput")
 const url = 'http://localhost:3000/api/v1/readability';
 
-
- fetch(url, {
+function executeFetch(){
+  fetch(url, {
 	method: 'post',
   headers: {
     'Content-Type': 'text/plain',
     'Content-Type': 'application/json'
   },
-  mode: 'cors',
+  // mode: 'cors',
 	body: JSON.stringify({
 		text: document.getElementById('userText').value
 	})
@@ -20,7 +20,10 @@ const url = 'http://localhost:3000/api/v1/readability';
   console.log(res.statusText);
   // console.log(res.text());
   console.log(res.headers.get('content-type'));
-  return res.text();
+  return res.text().then(function(text) {
+      myReadability.innerHTML = text;
+    });
 }).catch(function(err) {
 	console.log('Fetch Error :-S', err);
 });
+};

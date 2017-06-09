@@ -8,10 +8,10 @@
   <body>
     <h1>Welcome to the LIX-Readablity-Calculator<h1>
       <h2>Find out how readable your text is!</h2>
-    <form oninput="lixMeasure.value=fetch()">
-      <textarea id="userText" placeholder="Add sample text by typing in or pasting text and see instantly the results." rows="4" cols="50">This is a Test.</textarea>
+    <form oninput="executeFetch()">
+      <textarea id="userText"  placeholder="Add sample text by typing in or pasting text and see instantly the results." rows="4" cols="50">This is a Test.</textarea>
 
-      => LIX readability measure = <output name="lixMeasure" for="userText"></output>
+      => LIX readability measure = <output name="lixMeasure" id="readabilityOutput"></output>
     </form>
   </body>
 </html>
