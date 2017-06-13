@@ -1,14 +1,10 @@
-// var fetch = require('node-fetch');
 var computeLix = require('./readability.js')
 var express = require('express')
-// var cors = require('cors')
 var app = express()
 var bodyParser = require('body-parser');
 
-// app.use(express.static('public'))
 app.use(express.static('./'))
 app.use(bodyParser.json());
-// app.options('/api/v1/readability', cors())
 
 // POST: {"text":"This is a Test"}  <-- JSON encoding
 app.post('/api/v1/readability', function (req, res) {

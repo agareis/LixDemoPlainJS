@@ -8,7 +8,6 @@ function executeFetch(){
     'Content-Type': 'text/plain',
     'Content-Type': 'application/json'
   },
-  // mode: 'cors',
 	body: JSON.stringify({
 		text: document.getElementById('userText').value
 	})
