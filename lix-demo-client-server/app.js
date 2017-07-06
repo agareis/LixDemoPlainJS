@@ -3,7 +3,7 @@ var express = require('express')
 var app = express()
 var bodyParser = require('body-parser');
 
-app.use(express.static('./'))
+app.use(express.static('public'))
 app.use(bodyParser.json());
 
 // POST: {"text":"This is a Test"}  <-- JSON encoding
