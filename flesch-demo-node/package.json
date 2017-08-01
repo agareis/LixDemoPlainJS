@@ -1,0 +1,32 @@
+{
+  "name": "fre-demo-node",
+  "version": "1.0.0",
+  "description": "fre calculator in backend",
+  "main": "app.js",
+  "scripts": {
+    "prestart": "npm install",
+    "test": "mocha",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agareis/coding-journey.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agareis/coding-journey/issues"
+  },
+  "homepage": "https://github.com/agareis/coding-journey#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chai": "^4.0.0",
+    "express": "^4.15.3",
+    "mocha": "^3.5.0",
+    "nlp-syllables-async": "^0.1.2",
+    "syllable": "^2.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  }
+}
