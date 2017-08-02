@@ -1,14 +1,14 @@
-# LixDemoPlainJS
-Simple Lix ShowCase on One Pager:
+# LixDemoNodeJS
+Simple Lix Calculator in Node.js Backend:
 
-This application shows you the LIX readability measure by putting in example text into the textbox. This text can be pasted from a clipbaord copy 
-or typed in. The output measure will be seen instantly in a live view fashion.
+This backend application gives you the "LIX readability (difficulty) level" back by putting in example text into the body raw data within the Postman application.
 
-UserText Exaple for input of the textbox:
+You use the POST functionality with this parameters:
+URL: "http://localhost:3000/api/v1/readability"
+Body: "raw" & JSON(application/json)
 
-LIX is a readability measure indicating the difficulty of reading a text developed by Swedish scholar Carl-Hugo Björnsson. 
-It is computed as follows:
-LIX= A/B + (C*100)/A, where
-A is the number of words,
-B is the number of periods (defined by period, colon or capital first letter), and
-C is the number of long words (more than 6 letters)
+The response will be send back instantly with a translated difficulty level of the calculated score.
+
+UserText example for input of the body raw data within the Postman application:
+
+{"text":"Use your books and newspapers to write an English text."}
