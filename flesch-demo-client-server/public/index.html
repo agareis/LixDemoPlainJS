@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TextminersDemoCase</title>
+    <script type="text/javascript" src="model.js" async></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="title">
+      <h1>Welcome to the LIX-Readablity-Calculator<h1>
+    </div>
+    <div class="app">
+      <img class="image" src="../images/text-icon.png" alt="This is a screenshot">
+      <textarea id="userText"  placeholder="Find out how readable your text is! To get started, add sample text by typing in or pasting text and see instantly the results by clicking the button." rows="4" cols="50"></textarea>
+    </div>
+    <div class="button">
+      <button onclick="executeFetch()">Submit Text</button>
+    </div>
+    <div class="output">
+      <p>LIX readability measure =</p>
+      <p name="lixMeasure" id="readabilityOutput"></p>
+    </div>
+  </body>
+</html>

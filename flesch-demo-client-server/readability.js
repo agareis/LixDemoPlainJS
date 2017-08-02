@@ -1,5 +1,3 @@
-
-
 function getWordsCount(str) {
   if (str === undefined) { // No words were found
     console.log("getWordsCount:" + 0);

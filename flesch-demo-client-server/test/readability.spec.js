@@ -3,7 +3,7 @@ var expect = require('chai').expect,
 userTextVeryEasy = 'This is a Test.',
 userTextEasy = 'Use your books and newspapers to write an English text.',
 userTextMediumEasy = 'Use existing nodejs to compute the score for an English text.',
-userTextMedium = 'Use the existing library to compute the score for an English text.',
+userTextMedium = 'Use existing library to compute the score for an English text.',
 userTextMediumDifficult = 'Q1: use existing nodejs-library to compute the score \
 for an English text. -> I reuse the existing library like last time by copying \
 the filesystem into the new folder or do you have something different in mind?',

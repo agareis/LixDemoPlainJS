@@ -23,7 +23,6 @@
     "chai": "^4.0.0",
     "express": "^4.15.3",
     "mocha": "^3.5.0",
-    "nlp-syllables-async": "^0.1.2",
     "syllable": "^2.2.0"
   },
   "devDependencies": {
