@@ -27,30 +27,6 @@ function getSyllablesCount(str) {
   console.log("getSyllablesCount:" + syllable(str));
   return syllable(str);
 }
-// function getPeriodsCount(str) {
-//   if (str === undefined) { // No Periods were found
-//     console.log("getPeriodsCount:" + 0);
-//     return 0;
-//   }
-//   var dots = str.split(".").length - 1;
-//   var colons = str.split(":").length - 1;
-//   var capLetters = str.length - str.replace(/[A-Z]/g, '').length;
-//   console.log("getPeriodsCount: ->dots: " +dots+" colons: "+ colons+" capLetters: "+capLetters);
-//   return (dots+colons+capLetters);
-// }
-// function getLongWordsCount(str) {
-//   if (str === undefined) { // No long words were found
-//     console.log("getLongWordsCount:" + 0);
-//     return 0;
-//   }
-//   var match = str.match(/[\w0-9]{7,}/gi);
-//   if (match === null) {  // No long words were found
-//     console.log("getLongWordsCount: "+ 0);
-//     return 0;
-//   }
-//   console.log("getLongWordsCount: "+ match.length);
-//   return match.length;
-// }
 var computeFRE = function(str) {
   var fre = 206.835 - (1.015 * getWordsCount(str) / getSentencesCount(str)) -
   (84.6 * getSyllablesCount(str) / getWordsCount(str));
