@@ -17,17 +17,20 @@ function getSentencesCount(str) {
   return str.trim().split(/[\.\?\!]\s|$/).length;
 }
 function getSyllablesCount(str) {
-  var syllable = require('syllable');
+  var hyphenationPatternsDe = require ('hyphen/patterns/de.js');
+  var createHyphenator = require('hyphen');
+  var hyphenate = createHyphenator(hyphenationPatternsDe, {hyphenChar:' '});// use blank for counting syllables
+  var hyphenatedText = hyphenate(str);
   if (str === undefined) { // No words were found
     console.log("getSyllablesCount:" + 0);
     return 0;
   }
-  console.log("getSyllablesCount:" + syllable(str));
-  return syllable(str);
+  console.log("getSyllablesCount:" + hyphenatedText.split(' ').length);
+  return hyphenatedText.split(' ').length;
 }
 var computeFRE = function(str) {
-  var fre = 206.835 - (1.015 * getWordsCount(str) / getSentencesCount(str)) -
-  (84.6 * getSyllablesCount(str) / getWordsCount(str));
+  var fre = 180 - (getWordsCount(str) / getSentencesCount(str)) -
+  (58.5 * getSyllablesCount(str) / getWordsCount(str));
   console.log("computeFRE: "+ fre);
 
   if (fre==Infinity | fre==-Infinity) {
